@@ -1,0 +1,14 @@
+.image-container {
+    width: 100vw; /* 50% dari lebar layar */
+    border: 2px solid purple; /* Border warna ungu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Untuk memotong gambar jika melebihi ukuran kotak */
+  }
+  
+  .image-container img {
+    width: 100%; /* Agar gambar menyesuaikan dengan lebar container */
+    height: auto;
+  }
+  

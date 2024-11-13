@@ -1,0 +1,132 @@
+<head>
+    <meta charset="utf-8">
+    <title>Heyra</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .header-bg {
+            background: #e8d8f9;
+        }
+    </style>
+  </head>
+  <body class="bg-white h-screen">
+      <div class="header-bg p-4">
+          <div class="pt-5 pb-2 flex justify-between items-center">
+              <div>
+                  <p class="text-gray-500">Selamat Pagi,</p>
+                  <p class="text-gray-800 , font-semibold text-lg">Ucup</p>
+              </div>
+              <div>
+                  <i class="fas fa-bell text-xl text-gray-500"></i>
+              </div>
+          </div>
+          <div class="mt-4">
+              <div class="relative ">
+                  <input type="text" placeholder="Cari Fitur dan lainnya" class=" bg-white w-full p-3 pl-10 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600">
+                  <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+              </div>
+          </div>  
+      </div>
+      <div class="p-4">
+          <div class="mt-6 grid grid-cols-2 gap-4">
+              <a routerLink="/teks-animasi" routerLinkactive="active" class="block p-4 bg-green-100 rounded-lg hover:bg-green-200 transition">
+                  <i class="fas fa-file-alt text-green-500 text-2xl"></i>
+                  <p class="text-gray-800 ,mt-2 font-semibold">Teks ke Animasi</p>
+                  <p class="text-gray-500 text-sm">Ubah teks menjadi animasi isyarat</p>
+              </a>
+              <a routerLink="/livegestur" class="block p-4 bg-blue-100 rounded-lg hover:bg-blue-200 transition">
+                  <i class="fas fa-hand-paper text-blue-500 text-2xl"></i>
+                  <p class="text-gray-800 , mt-2 font-semibold">Gestur Ke Teks</p>
+                  <p class="text-gray-500 text-sm">Terjemahkan gestur ke teks</p>
+              </a>
+              <a  routerLink="/kamus" class="block p-4 bg-orange-100 rounded-lg hover:bg-orange-200 transition">
+                  <i class="fas fa-comments text-orange-500 text-2xl"></i>
+                  <p class="text-gray-800 , mt-2 font-semibold">Forum Diskusi</p>
+                  <p class="text-gray-500 text-sm">Diskusi komunitas isyarat</p>
+              </a>
+              <a  routerLink="/kamus" class="block p-4 bg-red-100 rounded-lg hover:bg-red-200 transition">
+                  <i class="fas fa-book text-red-500 text-2xl"></i>
+                  <p class="text-gray-800 , mt-2 font-semibold">Kamus BISINDO</p>
+                  <p class="text-gray-500 text-sm">Cari dan pelajari isyarat BISINDO</p>
+              </a>
+          </div>
+          <div class="mt-6">
+              <p class="text-gray-800 font-semibold text-lg">Acara</p>
+              <div class="card-container">
+                <!-- Card Pertama -->
+                <div class="card">
+                    <p class="font-semibold">Webinar Heyra</p>
+                    <p class="text-sm mt-1">Bergabunglah dengan ahli bahasa isyarat pada 28 Agustus 2024</p>
+                    <button>Lebih Lanjut</button>
+                </div>
+                <!-- Card Kedua -->
+                <div class="card">
+                    <p class="font-semibold">Workshop Teknologi</p>
+                    <p class="text-sm mt-1">Pelajari teknologi terkini pada 5 September 2024</p>
+                    <button>Lebih Lanjut</button>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 flex justify-around">
+        <div class="flex-1 flex flex-col items-center cursor-pointer text-center" onclick="navigateTo('beranda.html')">
+            <i id="beranda-icon" class="fas fa-home text-blue-200 text-2xl"></i>
+            <span id="beranda-text" class="text-blue-200 text-sm mt-1">Beranda</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center cursor-pointer text-center" onclick="navigateTo('disimpan.html')">
+            <i id="disimpan-icon" class="fas fa-bookmark text-blue-200 text-2xl"></i>
+            <span id="disimpan-text" class="text-blue-200 text-sm mt-1">Disimpan</span>
+        </div>
+        <div routerLink="/livegestur" class="flex-1 flex flex-col items-center cursor-pointer text-center">
+            <div id="kamera-icon" class="bg-purple-500 p-2 rounded-lg shadow-lg">
+                <i class="fas fa-camera text-white text-2xl"></i>
+            </div>
+        </div>
+        <div class="flex-1 flex flex-col items-center cursor-pointer text-center" onclick="navigateTo('acara.html')">
+            <i id="acara-icon" class="fas fa-calendar-alt text-blue-200 text-2xl"></i>
+            <span id="acara-text" class="text-blue-200 text-sm mt-1">Acara</span>
+        </div>
+        <div class="flex-1 flex flex-col items-center cursor-pointer text-center" onclick="navigateTo('profile.html')">
+            <i id="profile-icon" class="fas fa-user text-blue-200 text-2xl"></i>
+            <span id="profile-text" class="text-blue-200 text-sm mt-1">Profile</span>
+        </div>
+    </div>
+    
+    
+        <script>
+            function navigateTo(page) {
+                // Reset all icons and text colors
+                document.querySelectorAll('i').forEach(icon => icon.classList.remove('text-purple-400'));
+                document.querySelectorAll('span').forEach(text => text.classList.remove('text-purple-400'));
+    
+                // Set the active icon and text color
+                if (page === 'beranda.html') {
+                    document.getElementById('beranda-icon').classList.add('text-purple-400');
+                    document.getElementById('beranda-text').classList.add('text-purple-400');
+                } else if (page === 'disimpan.html') {
+                    document.getElementById('disimpan-icon').classList.add('text-purple-400');
+                    document.getElementById('disimpan-text').classList.add('text-purple-400');
+                } else if (page === 'kamera.html') {
+                    document.getElementById('kamera-icon').classList.add('bg-purple-500');
+                } else if (page === 'acara.html') {
+                    document.getElementById('acara-icon').classList.add('text-purple-400');
+                    document.getElementById('acara-text').classList.add('text-purple-400');
+                } else if (page === 'profile.html') {
+                    document.getElementById('profile-icon').classList.add('text-purple-400');
+                    document.getElementById('profile-text').classList.add('text-purple-400');
+                }
+    
+                // Navigate to the page
+                window.location.href = page;
+            }
+        </script>
+
+  </body>
+  
