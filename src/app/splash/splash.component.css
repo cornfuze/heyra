@@ -1,0 +1,26 @@
+.body {
+    font-family: 'Inter', sans-serif;
+}
+
+.splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff; // Warna latar belakang
+    overflow: hidden;
+}
+.splash-image {
+    width: 150px; // Ukuran gambar
+    animation: fade 1s ease-in-out infinite;
+}
+
+// Animasi transisi
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

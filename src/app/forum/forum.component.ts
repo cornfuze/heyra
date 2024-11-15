@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-forum',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './forum.component.css'
 })
 export class ForumComponent {
+  constructor(private location: Location) {}
 
+  goBack(): void {
+    this.location.back();
+  }
 }

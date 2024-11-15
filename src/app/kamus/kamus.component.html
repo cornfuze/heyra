@@ -26,30 +26,36 @@
   </style>
  </head>
  
- <body class="bg-gradient-to-r from-purple-50 to-indigo-50 flex items-center justify-center px-4 h-screen">
-  <div class="max-w-md mx-auto p-6 bg-white rounded-xl shadow-lg">
+ <body class="flex items-center justify-center px-4 h-screen bg-gradient-to-b from-purple-200 to-white q">
+  <div class="max-w-md mx-auto p-6  rounded-xl shadow-lg">
    <!-- Header -->
+   <div class="mx-auto p-4 ">
   <div class="header-bg p-4 ">
     <div class="flex justify-between items-center">
         <div>
-            <i (click)="goBack()" class="fas fa-arrow-left text-xl text-black"></i>
+          <svg (click)="goBack()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" class="text-black" />
+        </svg>
         </div>
         <div>
-            <p class="text-black">Kamuss BISINDO</p>
+            <p class="text-black text-xl font-semibold">Kamus BISINDO</p>
         </div>
         <div>
-            <i class="fas fa-bell text-xl text-gray-500"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-black">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+          </svg>  
         </div>
     </div>
     <div class="mt-4">
     </div>  
 </div>
    <!-- Search Bar -->
-   <div class="relative mb-6">
-    <input type="text" placeholder="Cari kosa Kata..." class="w-full p-3 border pl-10 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600">
-    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-    </i>
-   </div>
+   <div class="relative mb-6 gap-2">
+    <input  type="text" placeholder="Cari kosa Kata..." class="w-full text-black bg-white p-3 border pl-10 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-600">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="absolute left-4 top-1/2 transform -translate-y-1/2 size-6 text-gray-400">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+      </svg> 
+</div>
    <!-- Tabs -->
    <div class="flex space-x-2 mb-6">
     <button class="tab-button px-4 py-2 bg-purple-500 text-white rounded-full whitespace-nowrap transform transition-transform duration-200 active:scale-95 hover:bg-purple-600 shadow-md">
@@ -124,5 +130,7 @@
     </i>
    </div>
   </div>
+  </div>
  </body>
-</html>
+ 
+

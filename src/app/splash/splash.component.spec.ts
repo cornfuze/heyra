@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GesturTeksComponent } from './gestur-teks.component';
+import { SplashComponent } from './splash.component';
 
-describe('GesturTeksComponent', () => {
-  let component: GesturTeksComponent;
-  let fixture: ComponentFixture<GesturTeksComponent>;
+describe('SplashComponent', () => {
+  let component: SplashComponent;
+  let fixture: ComponentFixture<SplashComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GesturTeksComponent]
+      imports: [SplashComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GesturTeksComponent);
+    fixture = TestBed.createComponent(SplashComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
